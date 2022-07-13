@@ -1,0 +1,43 @@
+{
+  "name": "npm-template",
+  "version": "0.0.1",
+  "description": "This is a NPM template for creating packages",
+  "author": "pampamilya",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "browser": "dist/index.global.js",
+  "unpkg": "dist/index.global.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    "import": "./dist/index.mjs",
+    "require": "./dist/index.js",
+    "types": "./dist/index.d.ts"
+  },
+  "sideEffects": false,
+  "scripts": {
+    "format": "prettier --write \"{src,scripts}/**/*.ts\"",
+    "update": "yarn upgrade-interactive",
+    "build": "tsup",
+    "build:prod": "cross-env NODE_ENV=production yarn build",
+    "prebuild": "node scripts/clean.mjs"
+  },
+  "dependencies": {
+    "tslib": "^2.4.0"
+  },
+  "devDependencies": {
+    "@esbuild-plugins/node-modules-polyfill": "^0.1.4",
+    "@types/node": "^18.0.3",
+    "cross-env": "^7.0.3",
+    "prettier": "^2.7.1",
+    "tsup": "^6.1.3",
+    "typescript": "^4.7.4"
+  },
+  "engines": {
+    "node": ">=v16.0.0",
+    "npm": ">=7.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
