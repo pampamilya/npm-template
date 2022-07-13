@@ -1,8 +1,7 @@
 {
-  "name": "npm-template",
+  "name": "@pampamilya/npm-template",
   "version": "0.0.1",
   "description": "This is a NPM template for creating packages",
-  "author": "pampamilya",
   "license": "MIT",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -41,10 +40,13 @@
 	"bugs": {
 		"url": "https://github.com/pampamilya/npm-template"
 	},
+	"contributors": [
+		"lazuee <lazuee.dev@gmail.com>"
+  ],
 	"files": [
 		"dist",
 		"README.md",
-		"LICENSE"
+		"LICENSE.md"
 	],
   "engines": {
     "node": ">=v16.0.0",
